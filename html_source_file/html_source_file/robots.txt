@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /403.html
+Disallow: /404.html
+
+Sitemap: https://www.example.edu/~yourname/sitemap.xml
