@@ -1,8 +1,10 @@
-# Academic Homepage Template (Jekyll)
+# yaoyaoliu.web.illinois.edu
 
-A clean, single-column Jekyll template for academic personal websites: a hero with your photo and links, a fixed top navigation bar with drop-down menus, a publication list generated from YAML data, and ready-made pages for news, teaching, research group, service, talks, awards and biography.
+[![LICENSE](https://img.shields.io/github/license/yaoyao-liu/homepage?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/yaoyao-liu/homepage/blob/main/LICENSE)
 
-All personal content lives in `_config.yml`, `_data/` and a handful of Markdown files, so you can make it your own without touching the layouts.
+This is the latest version of [my personal website](https://yaoyaoliu.web.illinois.edu/)'s source code. Feel free to use and share.
+<br />
+For more details, please refer to this repository: <https://github.com/yaoyao-liu/minimal-light>.
 
 ## Quick start
 
@@ -15,7 +17,7 @@ bundle exec jekyll serve
 
 Open <http://localhost:4000>. The generated HTML is written to `_site/`.
 
-## Make it yours
+## Configurations
 
 1. **`_config.yml`** — name, position, affiliation, departments, e-mail, links (Google Scholar, DBLP, CV, GitHub, LinkedIn, Twitter, Bluesky), avatar, SEO fields and optional extras. Every option is commented in the file.
 2. **`index.md`** — the short introduction on the home page.
