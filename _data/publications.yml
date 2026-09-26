@@ -1,179 +1,51 @@
+# Publications shown on /publications/, grouped by year (newest first).
+# Fields: title, authors, conference_short (badge), conference, year, pdf, code, page, data, bibtex, image, notes, others
+# Use absolute URLs for images and files so that they work on every page.
 main:
 
-  - title: "ImageNet3D: Towards General-Purpose Object-Level 3D Understanding"
-    authors: Wufei Ma, Guofeng Zhang, Qihao Liu, Guanning Zeng, Adam Kortylewski, <strong>Yaoyao Liu</strong>, Alan Yuille
-    conference_short: NeurIPS
-    conference: NeurIPS 2024 Datasets and Benchmarks Track.
-    pdf: https://yaoyaoliu.web.illinois.edu/papers/ImageNet3D_Towards_General_Purpose_Object_Level_3D_Understanding.pdf
-    bibtex: https://dblp.org/rec/journals/corr/abs-2406-09613.html?view=bibtex
-    data: https://github.com/wufeim/imagenet3d
-    page: https://imagenet3d.github.io/
-    image: https://img.yliu.me/teaser/imagenet3d.png
-
-  - title: "HDR-GS: Efficient High Dynamic Range Novel View Synthesis at 1000x Speed via Gaussian Splatting"
-    authors: Yuanhao Cai, Zihao Xiao, Yixun Liang, Minghan Qin, Yulun Zhang, Xiaokang Yang, <strong>Yaoyao Liu</strong>, Alan Yuille
-    conference_short: NeurIPS
-    conference: Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2024.
-    pdf: https://www.cs.jhu.edu/~alanlab/Pubs24/cai2024hdr-gs.pdf
-    bibtex: https://dblp.org/rec/journals/corr/abs-2405-15125.html?view=bibtex
-    code: https://github.com/caiyuanhao1998/HDR-GS
-    image: https://img.yliu.me/teaser/hdr-gs.png
-
-  - title: "iNeMo: Incremental Neural Mesh Models for Robust Class-Incremental Learning"
-    authors: Tom Fischer, <strong>Yaoyao Liu</strong>, Artur Jesslen, Noor Ahmed, Prakhar Kaushik, Angtian Wang, Alan Yuille, Adam Kortylewski, Eddy Ilg
-    conference_short: ECCV
-    conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2024.
-    pdf: https://www.cs.jhu.edu/~yyliu/preprints/iNeMo_Incremental_Neural_Mesh_Models_for_Robust_Class-Incremental_Learning.pdf
-    code: https://github.com/Fischer-Tom/iNeMo
-    bibtex: https://dblp.org/rec/journals/corr/abs-2407-09271.html?view=bibtex
-    image: https://img.yliu.me/teaser/iNeMo.png
-    
-  - title: Generating Images with 3D Annotations Using Diffusion Models
-    authors: Wufei Ma*, Qihao Liu*, Jiahao Wang*, Angtian Wang, Xiaoding Yuan, Yi Zhang, Zihao Xiao, Guofeng Zhang, Beijia Lu, Ruxiao Duan, Yongrui Qi, Adam Kortylewski, <strong>Yaoyao Liu<sup><i class="fa-regular fa-envelope fa-xs"></i></sup></strong>, Alan Yuille <br>( <sup><i class="fa-regular fa-envelope fa-xs"></i></sup> Corresponding author)
-    conference_short: ICLR
-    conference: International Conference on Learning Representations <strong>(ICLR)</strong>, 2024.
-    pdf: https://openreview.net/pdf?id=XlkN11Xj6J
-    code: https://github.com/wufeim/DST3D
-    page: https://ccvl.jhu.edu/3D-DST/
-    bibtex: https://dblp.org/rec/conf/iclr/MaLWWY0X0LDQK0Y24.html?view=bibtex
-    image: https://img.yliu.me/teaser/dst.png
-    notes: Spotlight
-
-  - title: "Wakening Past Concepts without Past Data: Class-Incremental Learning from Online Placebos"
-    authors: <strong>Yaoyao Liu</strong>, Yingying Li, Bernt Schiele, and Qianru Sun
-    conference_short: WACV
-    conference: IEEE/CVF Winter Conference on Applications of Computer Vision <strong>(WACV)</strong>, 2024.
-    pdf: https://openaccess.thecvf.com/content/WACV2024/papers/Liu_Wakening_Past_Concepts_Without_Past_Data_Class-Incremental_Learning_From_Online_WACV_2024_paper.pdf
-    code: https://github.com/yaoyao-liu/online-placebos
-    bibtex: https://dblp.org/rec/conf/wacv/0001LSS24.html?view=bibtex
-    image: https://img.yliu.me/placebos_wacv24.png
-
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu<sup><i class="fa-regular fa-envelope fa-xs"></i></sup></strong>, Zongwei Zhou<sup><i class="fa-regular fa-envelope fa-xs"></i></sup> <br>( <sup><i class="fa-regular fa-envelope fa-xs"></i></sup> Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://dblp.org/rec/conf/miccai/ZhangLCYLZ23.html?view=bibtex
-    image: https://img.yliu.me/teaser/miccai2023.png
-    notes: Early Accept
-
-  - title: Continual Detection Transformer for Incremental Object Detection
-    authors: <strong>Yaoyao Liu</strong>, Bernt Schiele, Andrea Vedaldi, Christian Rupprecht
+  - title: "Paper Title One: A Descriptive Subtitle"
+    authors: First Author, <strong>Your Name</strong>, Third Author
     conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2023.
-    pdf: https://www.robots.ox.ac.uk/~vgg/publications/2023/Liu23/liu23.pdf
-    code: https://github.com/yaoyao-liu/CL-DETR
-    page: https://lyy.mpi-inf.mpg.de/CL-DETR/
-    bibtex: https://dblp.org/rec/conf/cvpr/0001SV023.html?view=bibtex
-    image: https://img.yliu.me/teaser/cvpr23_1.png
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026.
+    year: 2026
+    pdf: https://example.org/paper-one.pdf
+    code: https://github.com/username/paper-one
+    page: https://example.org/paper-one/
+    bibtex: https://example.org/paper-one.bib
+    image: ../assets/img/pub-placeholder.svg
+    notes: Oral
 
-  - title: Class-Incremental Exemplar Compression for Class-Incremental Learning
-    authors: Zilin Luo, <strong>Yaoyao Liu</strong>, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2023.
-    pdf: https://openaccess.thecvf.com/content/CVPR2023/papers/Luo_Class-Incremental_Exemplar_Compression_for_Class-Incremental_Learning_CVPR_2023_paper.pdf
-    code: https://github.com/xfflzl/CIM-CIL
-    page: https://class-il.mpi-inf.mpg.de/CIM/
-    bibtex: https://dblp.org/rec/conf/cvpr/Luo0SS23.html?view=bibtex
-    image: https://img.yliu.me/teaser/cvpr23_2.png
+  - title: "Paper Title Two"
+    authors: <strong>Your Name</strong>, Second Author
+    conference_short: NeurIPS
+    conference: Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2025.
+    year: 2025
+    pdf: https://example.org/paper-two.pdf
+    bibtex: https://example.org/paper-two.bib
+    image: ../assets/img/pub-placeholder.svg
 
-  - title: Online Hyperparameter Optimization for Class-Incremental Learning
-    authors: <strong>Yaoyao Liu</strong>, Yingying Li, Bernt Schiele, Qianru Sun
-    conference_short: AAAI
-    conference: AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2301.05032.pdf
-    code: https://github.com/yaoyao-liu/online-hyperparameter-optimization/
-    page: https://class-il.mpi-inf.mpg.de/online-hyperparameter-optimization/
-    bibtex: https://dblp.org/rec/conf/aaai/0001LSS23.html?view=bibtex
-    notes: Oral Presentation
-    image: https://img.yliu.me/teaser/OnlineHyperparameters.png
-
-  - title: Meta-Transfer Learning through Hard Tasks
-    authors: Qianru Sun*, <strong>Yaoyao Liu*</strong>, Zhaozheng Chen, Tat-Seng Chua, Bernt Schiele <br> (* Equal contribution)
+  - title: "Paper Title Three"
+    authors: First Author, Second Author, <strong>Your Name</strong>
     conference_short: TPAMI
-    conference: IEEE Transactions on Pattern Analysis and Machine Intelligence <strong>(TPAMI)</strong>, Volume 44, Number 3, 2022.
-    pdf: https://lyy.mpi-inf.mpg.de/preprints/Meta_Transfer_Learning_through_Hard_Tasks.pdf
-    code: https://github.com/yaoyao-liu/meta-transfer-learning
-    page: https://lyy.mpi-inf.mpg.de/mtl/
-    bibtex: https://dblp.org/rec/journals/pami/SunLCCS22.html?view=bibtex
-    image: https://img.yliu.me/teaser/MTL_PAMI.png
+    conference: IEEE Transactions on Pattern Analysis and Machine Intelligence <strong>(TPAMI)</strong>, 2024.
+    year: 2024
+    pdf: https://example.org/paper-three.pdf
+    code: https://github.com/username/paper-three
+    image: ../assets/img/pub-placeholder.svg
+    others: '<br><a href="https://example.org/" target="_blank" rel="noopener"><strong><i style="color:#e74d3c; font-weight:600">Media Coverage</i></strong></a>'
 
-  - title: "RMM: Reinforced Memory Management for Class-Incremental Learning"
-    authors: <strong>Yaoyao Liu</strong>, Bernt Schiele, Qianru Sun
-    conference_short: NeurIPS
-    conference: Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2021.
-    pdf: https://arxiv.org/pdf/2301.05792.pdf
-    code: https://gitlab.mpi-klsb.mpg.de/yaoyaoliu/rmm/
-    page: https://class-il.mpi-inf.mpg.de/rmm/
-    bibtex: https://dblp.org/rec/conf/nips/LiuSS21.html?view=bibtex
-    image: https://img.yliu.me/teaser/RMM.png
+  - title: "Paper Title Four"
+    authors: <strong>Your Name</strong>, Second Author
+    conference_short: ICLR
+    conference: International Conference on Learning Representations <strong>(ICLR)</strong>, 2022.
+    year: 2022
+    pdf: https://example.org/paper-four.pdf
+    image: ../assets/img/pub-placeholder.svg
 
-  - title: Adaptive Aggregation Networks for Class-Incremental Learning
-    authors: <strong>Yaoyao Liu</strong>, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2021.
-    pdf: https://arxiv.org/pdf/2010.05063.pdf
-    code: https://git.io/JYHyt
-    page: https://class-il.mpi-inf.mpg.de/
-    bibtex: https://dblp.org/rec/conf/cvpr/LiuSS21.html?view=bibtex
-    image: https://img.yliu.me/teaser/AANets.png
-    others: '<a href="https://github.com/yaoyao-liu/class-incremental-learning/tree/main/adaptive-aggregation-networks" target="_blank" rel="noopener"><strong> <i style="color:#e74d3c; font-weight:600" id="githubstars_manets"></i><i style="color:#e74d3c; font-weight:600"> GitHub Stars</i></strong></a><script>githubStars("yaoyao-liu/class-incremental-learning", function(stars) {var startext = document.getElementById("githubstars_manets"); startext.innerHTML=stars;});</script>'
-
-  - title: Learning to Teach and Learn for Semi-supervised Few-shot Image Classification
-    authors: Xinzhe Li, Jianqiang Huang, <strong>Yaoyao Liu</strong>, Qin Zhou, Shibao Zheng, Bernt Schiele, Qianru Sun
-    conference_short: CVIU
-    conference: Computer Vision and Image Understanding <strong>(CVIU)</strong>, Volume 212, 2021.
-    pdf: https://lyy.mpi-inf.mpg.de/preprints/Learning_to_Teach_and_Learn_for_Semi_Supervised_Few_Shot_Image_Classification.pdf
-    code: https://github.com/xinzheli1217/learning-to-self-train
-    bibtex: https://dblp.org/rec/journals/cviu/LiHLZZSS21.html?view=bibtex
-    image: https://img.yliu.me/teaser/LTTL.png
-
-  - title: Generating Face Images with Attributes for Free
-    authors: <strong>Yaoyao Liu</strong>, Qianru Sun, Xiangnan He, An-An Liu, Yuting Su, Tat-Seng Chua
-    conference_short: TNNLS
-    conference: IEEE Transactions on Neural Networks and Learning Systems <strong>(TNNLS)</strong>, Volume 32, Number 6, 2021.
-    pdf: https://ieeexplore.ieee.org/abstract/document/9146375
-    bibtex: https://dblp.org/rec/journals/tnn/LiuSHLSC21.html?view=bibtex
-    image: https://img.yliu.me/teaser/tnnls.png
-
-  - title: An Ensemble of Epoch-wise Empirical Bayes for Few-shot Learning
-    authors: <strong>Yaoyao Liu</strong>, Bernt Schiele, Qianru Sun
+  - title: "Paper Title Five"
+    authors: First Author, <strong>Your Name</strong>
     conference_short: ECCV
     conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2020.
-    pdf: https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123610392.pdf
-    code: https://gitlab.mpi-klsb.mpg.de/yaoyaoliu/e3bm
-    page: https://lyy.mpi-inf.mpg.de/e3bm/
-    bibtex: https://dblp.org/rec/conf/eccv/LiuSS20.html?view=bibtex
-    image: https://img.yliu.me/teaser/E3BM.png
-
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://dblp.org/rec/conf/cvpr/LiuSLSS20.html?view=bibtex
-    notes: Oral Presentation
-    image: https://img.yliu.me/teaser/mnemonics.png
-
-  - title: Learning to Self-Train for Semi-Supervised Few-Shot Classification
-    authors: Xinzhe Li, Qianru Sun, <strong>Yaoyao Liu</strong>, Shibao Zheng, Qin Zhou, Tat-Seng Chua, Bernt Schiele
-    conference_short: NeurIPS
-    conference: Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2019.
-    pdf: https://papers.nips.cc/paper/2019/file/bf25356fd2a6e038f1a3a59c26687e80-Paper.pdf
-    code: https://github.com/xinzheli1217/learning-to-self-trai
-    page: https://lyy.mpi-inf.mpg.de/lst/
-    bibtex: https://dblp.org/rec/conf/nips/LiSLZZCS19.html?view=bibtex
-    image: https://img.yliu.me/teaser/LST.png
-
-  - title: Meta-Transfer Learning for Few-Shot Learning
-    authors: Qianru Sun*, <strong>Yaoyao Liu*</strong>, Tat-Seng Chua, Bernt Schiele <br> (* Equal contribution)
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2019.
-    pdf: https://openaccess.thecvf.com/content_CVPR_2019/papers/Sun_Meta-Transfer_Learning_for_Few-Shot_Learning_CVPR_2019_paper.pdf
-    code: https://github.com/yaoyao-liu/meta-transfer-learning
-    page: https://yaoyaoliu.web.illinois.edu/projects/meta-transfer-learning/
-    bibtex: https://dblp.uni-trier.de/rec/conf/cvpr/SunLCS19.html?view=bibtex
-    image: https://img.yliu.me/teaser/MTL_CVPR.png
+    year: 2020
+    pdf: https://example.org/paper-five.pdf
+    image: ../assets/img/pub-placeholder.svg

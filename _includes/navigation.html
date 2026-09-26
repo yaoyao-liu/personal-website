@@ -1,0 +1,33 @@
+{% comment %} Top navigation links, driven by _data/navigation.yml. include.prefix = "./" or "../" {% endcomment %}
+{% assign p = include.prefix | default: "./" %}
+{% for link in site.data.navigation.main %}
+  {% assign link_url = '/' | append: link.url %}
+  {% if link.children %}
+    {% assign parent_active = false %}
+    {% for child in link.children %}{% assign child_url = '/' | append: child.url %}{% if page.url == child_url %}{% assign parent_active = true %}{% endif %}{% endfor %}
+    <div class="dropdown{% if link.right %} right{% endif %}">
+      <a class="normal dropbtn{% if parent_active %} active{% endif %}">{{ link.title }} <span class="dropdown-arrow">▾</span></a>
+      <div class="dropdown-content">
+        {% for child in link.children %}
+          {% assign child_url = '/' | append: child.url %}
+          <a href="{{ p }}{{ child.url }}"{% if page.url == child_url %} class="active"{% endif %}>{{ child.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% elsif link.right %}
+    <a class="normal right{% if page.url == link_url %} active{% endif %}" href="{{ p }}{{ link.url }}">{{ link.title }}</a>
+  {% else %}
+    <a class="normal{% if page.url == link_url %} active{% endif %}" href="{{ p }}{{ link.url }}">{{ link.title }}</a>
+  {% endif %}
+{% endfor %}
+
+<script>
+document.querySelectorAll('.topnav .dropbtn').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 960) {
+      e.stopPropagation();
+      btn.closest('.dropdown').classList.toggle('open');
+    }
+  });
+});
+</script>

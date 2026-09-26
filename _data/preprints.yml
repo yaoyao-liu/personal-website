@@ -1,22 +1,11 @@
+# Preprints are listed above the publications on /publications/.
+# Leave "main:" empty (or delete the entries) to hide the section.
 main:
 
-  - title: Active View Selection with Perturbed Gaussian Ensemble for Tomographic Reconstruction
-    authors: Yulun Wu, Ruyi Zha, Wei Cao, Yingying Li, Yuanhao Cai, <strong>Yaoyao Liu</strong>
-    conference_short: arXiv
-    conference: arXiv:2603.06852, 2026.
+  - title: "Preprint Title: Work in Progress"
+    authors: First Author, <strong>Your Name</strong>
+    conference_short: Preprint
     year: 2026
-    pdf: https://arxiv.org/pdf/2603.06852
-    bibtex: https://bib.yliu.me/active_view.txt
-    code: https://github.com/yulunwu0108/Perturbed-Gaussian-Ensemble
-    image: https://img.yliu.me/teaser/active_view.png
-
-  - title: How to Teach Large Multimodal Models New Skills
-    authors: Zhen Zhu, Yiming Gong, Yao Xiao, <strong>Yaoyao Liu</strong>, Derek Hoiem
-    conference_short: arXiv
-    conference: arXiv:2510.08564, 2025.
-    year: 2025
-    pdf: https://arxiv.org/pdf/2510.08564
-    bibtex: https://bib.yliu.me/LMMs.txt
-    code: https://github.com/jessemelpolio/LMM_CL
-    image: https://img.yliu.me/teaser/LMMs.png
-    others: '<br><a href="https://venturebeat.com/ai/researchers-find-that-retraining-only-small-parts-of-ai-models-can-cut-costs" target="_blank" rel="noopener"><strong><i style="color:#e74d3c; font-weight:600">Media Coverage by VentureBeat</i></strong></a>'
+    pdf: https://arxiv.org/abs/0000.00000
+    code: https://github.com/username/preprint
+    image: ../assets/img/pub-placeholder.svg

@@ -1,0 +1,30 @@
+{% comment %} Last-update stamp, footnote and visitor map. include.home = true on the home page only. {% endcomment %}
+{% if site.enable_last_update %}
+<small>Last Update:
+  <script>
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var modiDate = new Date(document.lastModified);
+    document.write(modiDate.getDate() + ". " + monthNames[modiDate.getMonth()] + " " + modiDate.getFullYear());
+  </script>
+</small>
+{% endif %}
+
+{% if include.home %}
+{% if site.footnote %}
+<div style="font: 12px/1.4 'Source Sans 3', sans-serif; color: #888; margin-top: 8px;">
+  {% if site.footnote_link %}<a href="{{ site.footnote_link }}" rel="noopener">{{ site.footnote }}</a>{% else %}{{ site.footnote }}{% endif %}
+</div>
+{% endif %}
+
+<br>
+{% if site.clustrmaps_id %}
+<div style="width:100px; pointer-events: none;">
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=043361&w=153&t=n&d={{ site.clustrmaps_id }}&co=ffffff&cmo=3eb7f0&ct=043361"></script>
+</div>
+{% endif %}
+{% if site.mapmyvisitors_id %}
+<div style="width:100px; pointer-events: none;">
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d={{ site.mapmyvisitors_id }}&co=ffffff&cmo=3eb7f0&cl=043361"></script>
+</div>
+{% endif %}
+{% endif %}

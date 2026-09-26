@@ -1,11 +1,19 @@
 main:
 
+  - title: "More"
+    right: true
+    children:
+      - title: "Service"
+        url: service/
+      - title: "Awards"
+        url: awards/
+      - title: "Talks"
+        url: talks/
+      - title: "Biography"
+        url: biography/
+
   - title: "Teaching"
     url: teaching/
-    right: true 
-
-  - title: "Services"
-    url: services/
 
   - title: "Group"
     url: research-group/
@@ -14,4 +22,4 @@ main:
     url: publications/
 
   - title: "Home"
-    url: 
+    url:

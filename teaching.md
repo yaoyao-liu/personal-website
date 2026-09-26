@@ -6,9 +6,11 @@ permalink: /teaching/
 
 <h1 id="teaching" style="height:0;margin:0;padding:0;line-height:0;overflow:hidden;"></h1>
 
-<h2 style="margin: 0px 0px 10px; border-bottom: none;">Teaching</h2>
+<h2 class="page-title">Teaching</h2>
 
-- Fall 2026: [Methods of Data Science](https://vision.ischool.illinois.edu/IS517-Fall2026/) (IS517)
-- Spring 2026: [Introduction to Data Science](https://vision.ischool.illinois.edu/IS407/) (IS407)
-- Fall 2025: [Methods of Data Science](https://vision.ischool.illinois.edu/IS517-Fall2025/) (IS517)
-- Spring 2025: [Concepts of Machine Learning](https://yaoyaoliu.web.illinois.edu/teaching/IS327/) (IS327)
+<ul class="dated-list term-list">
+  <li><strong>Fall 2026</strong> <a href="https://example.org/">Methods of Data Science</a><span class="course-code">CS 517</span></li>
+  <li><strong>Spring 2026</strong> <a href="https://example.org/">Introduction to Data Science</a><span class="course-code">CS 407</span>
+    <span class="note"><a href="https://example.org/">Teaching Excellence Award</a></span></li>
+  <li><strong>Fall 2025</strong> <a href="https://example.org/">Concepts of Machine Learning</a><span class="course-code">CS 327</span></li>
+</ul>

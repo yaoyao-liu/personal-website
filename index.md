@@ -2,18 +2,15 @@
 layout: homepage
 ---
 
+I am an Assistant Professor in the [Department of Computer Science](https://cs.example.edu/) at [Your University](https://www.example.edu/). I am also affiliated with the [Institute for Artificial Intelligence](https://ai.example.edu/).
 
-I am an Assistant Professor in the [School of Information Sciences](https://ischool.illinois.edu/) and the [Coordinated Science Laboratory](https://csl.illinois.edu/) at the [University of Illinois Urbana-Champaign](https://www.illinois.edu/). I am also affiliated with the [Siebel School of Computing and Data Science](https://cs.illinois.edu/) (formerly the Department of Computer Science) and the [Department of Electrical & Computer Engineering](https://ece.illinois.edu/).
+Before joining Your University, I obtained my Ph.D. in Computer Science at [Previous University](https://www.example.org/) and my B.S. at [Undergraduate University](https://www.example.org/). My full biography is [here](./biography/).
 
-Previously, I received my Ph.D. in Computer Science at [Max Planck Institute for Informatics](https://www.mpi-inf.mpg.de/) and my B.S. in Electronic Information Engineering at [Tianjin University](https://en.tju.edu.cn/). I also spent time at [Johns Hopkins](https://ccvl.jhu.edu/), [Oxford VGG](https://www.robots.ox.ac.uk/~vgg/), and [National University of Singapore](https://www.comp.nus.edu.sg/). 
+My research lies at the intersection of **machine learning** and **computer vision**. My research interests include **topic A**, **topic B**, and **topic C**.
 
-My research lies at the intersection of **computer vision** and **machine learning**, with a special focus on building intelligent visual systems that are continual and data-efficient. My research interests include **continual learning**, **few-shot learning**, **semi-supervised learning**, **generative models**, **3D geometry models**, and **medical image analysis**.
-
-
-<div style="border-left: 4px solid #FF5F05; padding: 10px 16px; background-color: #fafafa; color: #333; border-radius: 0 4px 4px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.07);">
-<strong style="color:#c0392b;">Prospective students: If you are interested in working with me, please see details <a href="https://vision.ischool.illinois.edu/openings/">here</a>.</strong>
+<div class="callout">
+  <span class="callout-title">Prospective Students:</span> If you are interested in working with me, please see <a href="https://example.org/openings/">this page</a>.
 </div>
-
 
 {% include_relative _includes/news.md %}
 

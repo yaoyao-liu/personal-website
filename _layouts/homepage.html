@@ -1,247 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>{{ site.title }} | {{ site.affiliation }}</title>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="{{ site.title }}">
-    <meta name="keywords" content="{{ site.keywords }}">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ site.title }} | {{ site.affiliation }}">
-    <meta property="og:url" content="{{ site.canonical }}">
-    <meta property="og:site_name" content="{{ site.title }} | {{ site.affiliation }}">
-    <meta property="og:description" content="{{ site.description }}">
-    <meta property="og:locale" content="default">
-    <meta property="og:image" content="{{ site.avatar }}">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ site.title }} | {{ site.affiliation }}">
-    <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:image" content="{{ site.avatar }}">
-
-    <link rel="canonical" href="{{site.canonical}}/"/>
-    <link rel="apple-touch-icon" sizes="57x57" href="./assets/Illinois/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./assets/Illinois/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/Illinois/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/Illinois/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./assets/Illinois/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/Illinois/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./assets/Illinois/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/Illinois/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Illinois/apple-icon-180x180.png">
-    <link rel="icon" href="./assets/Illinois/favicon.ico">
-    <link rel="manifest" href="./assets/Illinois/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./assets/Illinois/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/pub.css">
-    <link rel="stylesheet" href="./assets/css/nav.css">
-
-    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
-    
-    <script src="./assets/js/github-stars.js"></script>
-    <script type="text/javascript" src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
-
-    <style>
-      #newsmore {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
-      }
-      #newsmore.open {
-        max-height: 2000px;
-      }
-    </style>
-    <script type="text/javascript">
-      function toggleVis(link) {
-        var div = document.getElementById('newsmore');
-        if (div.classList.contains('open')) {
-          div.classList.remove('open');
-          link.textContent = 'Show more';
-        } else {
-          div.classList.add('open');
-          link.textContent = 'Show less';
-        }
-      }
-    </script>
-
-   <script>
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        var icon = document.querySelector('.topnav a.icon');
-        x.classList.toggle('open');
-        icon.classList.toggle('active');
-      }
-   </script>
-  
-
+    {% include head.html prefix="./" %}
   </head>
   <body>
-    
-    <div class="topnav">
 
-      <a href="{{ site.affiliation_link }}"><img width="120" src="{{ site.affiliation_logo }}"></a>
+    {% include topnav.html prefix="./" %}
 
-      <div id="myLinks">
-      {% include navigation-home.md %}
-      </div>
-
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <span class="icon-wrap">
-          <i class="fa fa-bars icon-bars"></i>
-          <i class="fa fa-xmark icon-xmark"></i>
-        </span>
-      </a>
-      
-    </div>
-    
-
-    <script src="./assets/js/vanilla-back-to-top.min.js"></script>
-    <script>addBackToTop({
-        backgroundColor: '#fff',
-        innerHTML: 'Back to Top',
-        textColor: '#333'
-      })
-    </script>
-    <style>
-        #back-to-top {
-          border: 1px solid #ccc;
-          border-radius: 0;
-          font-size: 15px;
-          width: 100px;
-          text-align: center;
-          line-height: 30px;
-          height: 30px;
-        }
-    </style>
-    
-    <div class="wrapper">
-      <header>
-        
-        {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
-        {% endif %}
-
-        <h1>{{ site.title }}</h1>
-
-        {% if site.position %}
-        <position style="font-size:1.10rem;">{{ site.position }}</position>
-        {% endif %}
-        {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
-        <br>
-        {% endif %}
-        {% if site.email %}
-        <email>{{ site.email }}</email>
-        {% endif %}
-        
-        <br>
-        <br>
-
-        {% if site.link_type == 'text' %}
-        [<a href="{{ site.google_scholar }}">Google Scholar</a>]
-        <br>
-        [<a href="{{ site.cv_link }}">Curriculum Vitae</a>]
-        <br>
-        {% endif %}
-
-        {% if site.link_type == 'icon' %}
-        <div class="social-icons">
-        {% if site.google_scholar %}
-        <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}">
-          <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
-        </a>  
-        {% endif %}
-
-        {% if site.cv_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
-          <i class="ai ai-cv" style="font-size:1.3rem;"></i>
-        </a>
-        {% endif %}
-
-        {% if site.github_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
-          <i class="fab fa-github"></i>
-        </a>
-        {% endif %}
-
-        {% if site.linkedin %}
-        <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        {% endif %}
-
-        {% if site.twitter %}
-        <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
-          <i class="fab fa-x-twitter"></i>
-        </a>
-        {% endif %}
-
-        {% if site.bluesky %}
-        <a style="margin: 0 0 0 0" href="{{ site.bluesky }}">
-          <i class="fab fa-bluesky"></i>
-        </a>
-        {% endif %}
-        </div>
-        {% endif %}
-        <br>
-
-      </header>
+    <div class="wrapper single-col">
+      {% include hero.html prefix="./" %}
       <section>
 
       {{ content }}
 
       <br>
 
-      {% if site.enable_last_update %}
-      <small>Last Update:
-            <script>
-              const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
-              ];
-              var modiDate = new Date(document.lastModified);
-              var showAs = modiDate.getDate() + ". " + monthNames[modiDate.getMonth()] + " " + modiDate.getFullYear();
-              document.write(showAs);
-            </script>
-      </small> 
-      {% endif %}
+      {% include page-end.html home=true %}
 
-      {% if site.footnote %}
-      <div style="font: 12px/1.2 Crimson Pro, serif">
-        <br>
-        <a href="{{ site.footnote_link }}" rel="noopener">{{ site.footnote }}</a>
-      </div>
-      {% endif %}
-
-      <br>
-      {% if site.clustrmaps_id %}
-      <div style="width:100px; pointer-events: none;">
-      <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=043361&w=153&t=n&d={{ site.clustrmaps_id }}&co=ffffff&cmo=3eb7f0&ct=043361'></script>
-      </div>
-      {% endif %}
-      
       </section>
-      <footer>
-        <div style="font: 12px/1.2 Crimson Pro, serif">
-        <p>
-        <small>
-        {% if site.imprint %}
-        <a href="{{ site.imprint }}" rel="noopener"><autocolor>Imprint / Impressum</autocolor></a><br>
-        {% endif %}
-        {% if site.data_protection %}
-        <a href="{{ site.data_protection }}" rel="noopener"><autocolor>Data Protection / Datenschutzhinweis</autocolor></a>
-        {% endif %}
-        </small>
-        </p>
-        </div>
-        <br>
-        <br>
-      </footer>
+      {% include footer.html %}
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script src="./assets/js/scale.fix.js"></script>
   </body>
 </html>

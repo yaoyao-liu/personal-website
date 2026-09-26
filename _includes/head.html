@@ -1,0 +1,76 @@
+{% comment %}
+  Shared <head> for every layout.
+  include.prefix     relative path to the site root ("./" on the home page, "../" on sub-pages)
+  include.page_title optional page title prepended to the site title
+{% endcomment %}
+{% assign p = include.prefix | default: "./" %}
+{% assign avatar_url = site.avatar %}
+{% unless avatar_url contains "://" or avatar_url == "" %}{% assign avatar_url = site.canonical | append: "/" | append: avatar_url %}{% endunless %}
+<title>{% if include.page_title %}{{ include.page_title }} | {% endif %}{{ site.title }} | {{ site.affiliation }}</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="{{ site.description | default: site.title }}">
+<meta name="keywords" content="{{ site.keywords }}">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ site.title }} | {{ site.affiliation }}">
+<meta property="og:url" content="{{ site.canonical }}{{ page.url }}">
+<meta property="og:site_name" content="{{ site.title }} | {{ site.affiliation }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="{{ avatar_url }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ site.title }} | {{ site.affiliation }}">
+<meta name="twitter:description" content="{{ site.description }}">
+<meta name="twitter:image" content="{{ avatar_url }}">
+
+<link rel="canonical" href="{{ site.canonical }}{{ page.url }}"/>
+<link rel="apple-touch-icon" sizes="57x57" href="{{ p }}assets/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ p }}assets/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ p }}assets/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ p }}assets/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ p }}assets/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ p }}assets/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ p }}assets/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ p }}assets/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ p }}assets/favicon/apple-icon-180x180.png">
+<link rel="icon" href="{{ p }}assets/favicon/favicon.ico">
+<link rel="manifest" href="{{ p }}assets/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ p }}assets/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{{ p }}assets/css/style.css">
+<link rel="stylesheet" href="{{ p }}assets/css/pub.css">
+<link rel="stylesheet" href="{{ p }}assets/css/nav.css">
+{% for css in site.extra_css %}<link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+<script type="text/javascript" src="{{ p }}assets/js/jquery.js"></script>
+
+<style>
+  #newsmore { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
+  #newsmore.open { max-height: 2000px; }
+</style>
+<script type="text/javascript">
+  /* "Show more" toggle used by _includes/news.md */
+  function toggleVis(link) {
+    var div = document.getElementById('newsmore');
+    if (div.classList.contains('open')) {
+      div.classList.remove('open');
+      link.textContent = 'Show more';
+    } else {
+      div.classList.add('open');
+      link.textContent = 'Show less';
+    }
+  }
+  /* Hamburger menu on narrow screens */
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    var icon = document.querySelector('.topnav a.icon');
+    x.classList.toggle('open');
+    icon.classList.toggle('active');
+  }
+</script>

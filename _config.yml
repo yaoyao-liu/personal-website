@@ -1,46 +1,81 @@
-# Basic Information 
-title: Yaoyao Liu
+# ------------------------------------------------------------------
+# Basic information
+# ------------------------------------------------------------------
+title: Your Name
+# title_native: 姓名                 # optional, shown in a lighter font next to your name
 position: Assistant Professor
-affiliation: University of Illinois
-affiliation_link: https://www.illinois.edu/
-affiliation_logo: ./assets/img/illinois.svg
-email: lyy (at) illinois.edu
+affiliation: Your University
+affiliation_link: https://www.example.edu/
+affiliation_logo: assets/img/logo.svg   # logo in the top bar (white artwork works best on the dark bar)
+email: your.name (at) example.edu
 
-# Search Engine Optimization (SEO)
-keywords: yaoyao liu, liu yaoyao, yaoyaoliu, liuyaoyao
-canonical: https://yaoyaoliu.web.illinois.edu
-description: Yaoyao Liu is an assistant professor at the University of Illinois Urbana-Champaign. His research lies in meta-learning, incremental learning, and image generation.
+# Departments / units listed under your position on every page.
+# "note" is appended in parentheses, e.g. "(affiliate)". Delete the list to hide it.
+departments:
+  - name: Department of Computer Science
+    link: https://cs.example.edu/
+  - name: Institute for Artificial Intelligence
+    link: https://ai.example.edu/
+    note: affiliate
 
-# The option is used to enable the Illinois template.
-enable_hopkins_logo: true
+# ------------------------------------------------------------------
+# Search engine optimization (SEO)
+# ------------------------------------------------------------------
+keywords: your name, research, your university
+canonical: https://www.example.edu/~yourname   # site root, no trailing slash
+description: Your Name is an assistant professor at Your University working on machine learning and computer vision.
 
-# The option is used to show the last update time.
-enable_last_update: false
+# ------------------------------------------------------------------
+# Options
+# ------------------------------------------------------------------
+enable_last_update: false   # print the page's last-modified date under the content
+link_type: text             # text = labelled pills under your name; icon = icons only
+pub_archive_year: 2022      # publications from this year and earlier share one "and Before" heading; delete to disable
 
-# Links
-link_type: icon #text/icon
-google_scholar: https://scholar.google.com/citations?user=Qi2PSmEAAAAJ
-github_link: https://github.com/yaoyao-liu/
-linkedin: https://www.linkedin.com/in/liuyaoyao/
-twitter: https://twitter.com/YaoyaoLiu1/
+# ------------------------------------------------------------------
+# Links (delete a line to hide that button)
+# ------------------------------------------------------------------
+google_scholar: https://scholar.google.com/citations?user=XXXXXXXXXXXX
+dblp: https://dblp.org/pid/00/0000.html
+# cv_link: https://www.example.edu/~yourname/cv.pdf
+# github_link: https://github.com/username
+# linkedin: https://www.linkedin.com/in/username/
+# twitter: https://twitter.com/username
+# bluesky: https://bsky.app/profile/username.bsky.social
 
-# Images 
-avatar: https://img.yliu.me/yaoyaoliu.jpg
+# ------------------------------------------------------------------
+# Images
+# ------------------------------------------------------------------
+# A path relative to the site root, or an absolute https URL.
+# Use an absolute URL if you want the photo to appear in social-media previews.
+avatar: assets/img/placeholder.svg
 
-# Footnotes
-footnote: Feel free to use my website's source code.
-footnote_link: https://github.com/yaoyao-liu/minimal-light
+# ------------------------------------------------------------------
+# Optional extras
+# ------------------------------------------------------------------
+# Extra stylesheets loaded after the theme, e.g. your university's brand CSS.
+# extra_css:
+#   - https://www.example.edu/brand.css
 
-# Analytics
-# Please remove the following lines about analytics services if you fork my project. 
-# Otherwise, the analytics information of your website will be recorded to my ClustrMaps accounts.
-clustrmaps_id: HV0rAUdAxpfEQLOsVs0FcJTR2rKVI5sEQUZIDM-N_HY
+# Short note printed at the bottom of the home page.
+footnote: Feel free to use the source code of this website.
+footnote_link: https://github.com/username/repository
 
-# The following files will be removed from the generated website.
+# Legal links shown in the footer.
+# imprint: https://www.example.edu/imprint
+# data_protection: https://www.example.edu/privacy
+
+# Visitor maps. Only set these if you have your own account,
+# otherwise your visitors are counted towards somebody else's map.
+# clustrmaps_id:
+# mapmyvisitors_id:
+
+# ------------------------------------------------------------------
+# Files that are not copied to the generated website
+# ------------------------------------------------------------------
 exclude:
-  - build.sh
   - Gemfile
   - Gemfile.lock
   - README.md
   - LICENSE
-  - CNAME
+  - vendor

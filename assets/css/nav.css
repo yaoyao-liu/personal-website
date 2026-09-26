@@ -60,8 +60,14 @@
     color: #fff;
 }
 
-.topnav a.normal:hover::after {
+.topnav a.normal:hover::after,
+.topnav a.normal.active::after {
     transform: scaleX(1);
+}
+
+.topnav a.normal.active {
+    color: #fff;
+    font-weight: 500;
 }
 
 /* First nav item — align right edge with the page wrapper */
@@ -120,6 +126,12 @@
 .topnav .dropdown-content a:hover {
     color: #fff;
     background-color: rgba(255,255,255,0.08);
+}
+
+.topnav .dropdown-content a.active {
+    color: #fff;
+    font-weight: 500;
+    box-shadow: inset 3px 0 0 #FF5F05;
 }
 
 .topnav .dropdown:hover .dropdown-content {
@@ -257,5 +269,14 @@
     .topnav .dropdown-content a:hover {
         color: #fff;
         background-color: transparent;
+    }
+
+    .topnav .dropdown-content a.active {
+        box-shadow: none;
+        color: #FF5F05;
+    }
+
+    .topnav a.normal.active {
+        color: #FF5F05;
     }
 }

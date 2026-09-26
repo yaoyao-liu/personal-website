@@ -1,9 +1,7 @@
-<h2 style="margin: 60px 0px 10px;">Contact</h2>
+<h2>Contact</h2>
 
-614 E. Daniel St. MC-314
-<br />
-Champaign, IL 61820-7999
-<br />
-Phone: <a href="tel:+12173000910">217-300-0910</a>
-<br />
-Office: <a href="https://maps.app.goo.gl/xvHRWG27wSZXQ1Cv7">5125</a>
+<ul class="contact-list">
+  <li><i class="fa-solid fa-envelope fa-fw"></i>Mailing Address: 123 Example Street, City, State 00000</li>
+  <li><i class="fas fa-location-dot fa-fw"></i>Office: Room 000, <a href="https://maps.google.com/">Example Building</a></li>
+  <li><i class="fas fa-phone fa-fw"></i>Phone: <a href="tel:+10000000000">(000) 000-0000</a></li>
+</ul>

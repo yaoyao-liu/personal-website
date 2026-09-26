@@ -1,0 +1,48 @@
+{% comment %} Fixed top bar with the affiliation logo, navigation and the back-to-top button. {% endcomment %}
+{% assign p = include.prefix | default: "./" %}
+{% assign logo = site.affiliation_logo %}
+{% unless logo contains "://" or logo == "" %}{% assign logo = p | append: logo %}{% endunless %}
+<div class="topnav">
+
+  <a href="{{ site.affiliation_link }}"><img width="120" src="{{ logo }}" alt="{{ site.affiliation }}"></a>
+
+  <div id="myLinks">
+  {% include navigation.html prefix=p %}
+  </div>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <span class="icon-wrap">
+      <i class="fa fa-bars icon-bars"></i>
+      <i class="fa fa-xmark icon-xmark"></i>
+    </span>
+  </a>
+
+</div>
+
+<script src="{{ p }}assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+    backgroundColor: '#13294B',
+    innerHTML: 'Back to Top',
+    textColor: '#fff'
+  })
+</script>
+<style>
+    #back-to-top {
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 500;
+      width: 100px;
+      text-align: center;
+      line-height: 32px;
+      height: 32px;
+      box-shadow: 0 2px 8px rgba(19, 41, 75, 0.25);
+      opacity: 0.92;
+      transition: opacity 0.2s ease, box-shadow 0.2s ease;
+    }
+    #back-to-top:hover {
+      opacity: 1;
+      box-shadow: 0 4px 12px rgba(19, 41, 75, 0.35);
+    }
+</style>

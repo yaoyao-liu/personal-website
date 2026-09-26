@@ -1,106 +1,48 @@
-<h2 id="publications" class="pub-section-title" >Publications <span class="pub-ext-links"><a href="https://scholar.google.com/citations?user=Qi2PSmEAAAAJ" target="_blank">Google Scholar</a><a href="https://dblp.org/pid/12/10033-1.html" target="_blank">DBLP</a></span></h2>
-
-<h3 class="pub-subsection" style="margin: 30px 0px -30px;">Preprints</h3>
-
+<h2 id="publications" class="pub-section-title">Publications{% if site.google_scholar or site.dblp %} <span class="pub-ext-links">{% if site.google_scholar %}<a href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}{% if site.dblp %}<a href="{{ site.dblp }}" target="_blank" rel="noopener">DBLP</a>{% endif %}</span>{% endif %}</h2>
 
 <div class="publications">
-<ol class="bibliography">
 
+{% if site.data.preprints.main and site.data.preprints.main.size > 0 %}
+<h2 class="year">Preprints</h2>
+
+<ol class="bibliography">
 {% for link in site.data.preprints.main %}
-
-<li>
-<div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
-            <abbr class="badge" data-venue="{{ link.conference_short }}">{{ link.conference_short }}</abbr>
-  </div>
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-      <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
-      <div class="author">{{ link.authors }}</div>
-      <div class="periodical"><em>{{ link.conference }}</em>
-      </div>
-    <div class="links">
-      {% if link.pdf %} 
-      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
-      {% endif %}
-      {% if link.code %} 
-      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
-      {% endif %}
-      {% if link.page %} 
-      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
-      {% endif %}
-      {% if link.data %} 
-      <a href="{{ link.data }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Dataset</a>
-      {% endif %}
-      {% if link.bibtex %} 
-      <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
-      {% endif %}
-      {% if link.notes %} 
-      <strong> <i style="color:#e74d3c; font-weight:600">{{ link.notes }}</i></strong>
-      {% endif %}
-      {% if link.others %} 
-      {{ link.others }}
-      {% endif %}
-    </div>
-  </div>
-</div>
-</li>
-
-
+{% include publication-item.html link=link %}
 {% endfor %}
-
 </ol>
-</div>
+{% endif %}
 
+{% assign cutoff = site.pub_archive_year | default: 0 | plus: 0 %}
+{% assign publications_by_year = site.data.publications.main | group_by: "year" | sort: "name" | reverse %}
+{% assign older_pubs = "" | split: "" %}
 
+{% for year_group in publications_by_year %}
+{% assign yr = year_group.name | plus: 0 %}
+{% if yr <= cutoff %}
+{% assign older_pubs = older_pubs | concat: year_group.items %}
+{% else %}
 
-<h3 class="pub-subsection" style="margin: 35px 0px -30px;">Publications</h3>
+<h2 class="year">{{ year_group.name }}</h2>
 
-
-<div class="publications">
 <ol class="bibliography">
+{% for link in year_group.items %}
+{% include publication-item.html link=link %}
+{% endfor %}
+</ol>
 
-{% for link in site.data.publications.main %}
-
-<li>
-<div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
-            <abbr class="badge">{{ link.conference_short }}</abbr>
-  </div>
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-      <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
-      <div class="author">{{ link.authors }}</div>
-      <div class="periodical"><em>{{ link.conference }}</em>
-      </div>
-    <div class="links">
-      {% if link.pdf %} 
-      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
-      {% endif %}
-      {% if link.code %} 
-      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
-      {% endif %}
-      {% if link.page %} 
-      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
-      {% endif %}
-      {% if link.data %} 
-      <a href="{{ link.data }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Dataset</a>
-      {% endif %}
-      {% if link.bibtex %} 
-      <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
-      {% endif %}
-      {% if link.notes %} 
-      <strong> <i style="color:#e74d3c; font-weight:600">{{ link.notes }}</i></strong>
-      {% endif %}
-      {% if link.others %} 
-      {{ link.others }}
-      {% endif %}
-    </div>
-  </div>
-</div>
-</li>
-
+{% endif %}
 {% endfor %}
 
+{% if older_pubs.size > 0 %}
+
+<h2 class="year">{{ cutoff }} and Before</h2>
+
+<ol class="bibliography">
+{% for link in older_pubs %}
+{% include publication-item.html link=link %}
+{% endfor %}
 </ol>
+
+{% endif %}
+
 </div>

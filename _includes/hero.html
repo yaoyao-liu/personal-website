@@ -1,0 +1,36 @@
+{% comment %} Name, position, affiliation and link pills shown at the top of every page. {% endcomment %}
+{% assign p = include.prefix | default: "./" %}
+{% assign avatar = site.avatar %}
+{% unless avatar contains "://" or avatar == "" %}{% assign avatar = p | append: avatar %}{% endunless %}
+<header class="hero">
+
+  {% if site.avatar %}
+  <a class="image avatar"><img src="{{ avatar }}" alt="{{ site.title }}" /></a>
+  {% endif %}
+
+  <div class="hero-text">
+
+    <h1>{{ site.title }}{% if site.title_native %} <span class="hero-native">{{ site.title_native }}</span>{% endif %}</h1>
+
+    {% if site.position %}<div class="hero-position">{{ site.position }}</div>{% endif %}
+
+    <p class="hero-affil">
+      {% if site.departments %}<span class="hero-affil-depts">{% for d in site.departments %}<a href="{{ d.link }}" rel="noopener">{{ d.name }}</a>{% if d.note %} ({{ d.note }}){% endif %}<br>
+      {% endfor %}</span>{% endif %}
+      {% if site.affiliation %}<a href="{{ site.affiliation_link }}" rel="noopener">{{ site.affiliation }}</a>{% endif %}
+    </p>
+
+    <div class="hero-links{% if site.link_type == 'icon' %} icon-only{% endif %}">
+      {% if site.email %}{% assign hero_mail = site.email | replace: ' (at) ', '@' | replace: '(at)', '@' | replace: ' [at] ', '@' | strip %}<a class="hero-pill" href="mailto:{{ hero_mail }}" title="{{ hero_mail }}"><i class="fa-solid fa-envelope"></i><span>Email</span></a>{% endif %}
+      {% if site.google_scholar %}<a class="hero-pill" href="{{ site.google_scholar }}" title="Google Scholar"><i class="ai ai-google-scholar"></i><span>Google Scholar</span></a>{% endif %}
+      {% if site.cv_link %}<a class="hero-pill hero-pill-extra" href="{{ site.cv_link }}" title="CV"><i class="ai ai-cv"></i><span>CV</span></a>{% endif %}
+      {% if site.github_link %}<a class="hero-pill hero-pill-extra" href="{{ site.github_link }}" title="GitHub"><i class="fab fa-github"></i><span>GitHub</span></a>{% endif %}
+      {% if site.linkedin %}<a class="hero-pill hero-pill-extra" href="{{ site.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>{% endif %}
+      {% if site.twitter %}<a class="hero-pill hero-pill-extra" href="{{ site.twitter }}" title="Twitter"><i class="fab fa-x-twitter"></i><span>Twitter</span></a>{% endif %}
+      {% if site.bluesky %}<a class="hero-pill hero-pill-extra" href="{{ site.bluesky }}" title="Bluesky"><i class="fab fa-bluesky"></i><span>Bluesky</span></a>{% endif %}
+    </div>
+
+  </div>
+
+</header>
+<hr class="hero-rule">
