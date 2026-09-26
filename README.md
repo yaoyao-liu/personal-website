@@ -6,7 +6,8 @@ This is the latest version of [my personal website](https://yaoyaoliu.web.illino
 <br />
 For more details, please refer to this repository: <https://github.com/yaoyao-liu/minimal-light>.
 
-## Quick start
+## Using with Jekyll
+### Quick start
 
 You need [Ruby](https://www.ruby-lang.org/en/) and [Jekyll](https://jekyllrb.com/).
 
@@ -17,7 +18,7 @@ bundle exec jekyll serve
 
 Open <http://localhost:4000>. The generated HTML is written to `_site/`.
 
-## Configurations
+### Configurations
 
 1. **`_config.yml`** — name, position, affiliation, departments, e-mail, links (Google Scholar, DBLP, CV, GitHub, LinkedIn, Twitter, Bluesky), avatar, SEO fields and optional extras. Every option is commented in the file.
 2. **`index.md`** — the short introduction on the home page.
@@ -30,7 +31,7 @@ Open <http://localhost:4000>. The generated HTML is written to `_site/`.
 
 Delete any page you do not need (for example `awards.md`) and remove it from `_data/navigation.yml`.
 
-## Layouts
+### Layouts
 
 | Layout     | Used by                         | Description                                         |
 |------------|---------------------------------|-----------------------------------------------------|
@@ -40,13 +41,17 @@ Delete any page you do not need (for example `awards.md`) and remove it from `_d
 
 The layouts share `_includes/head.html`, `topnav.html`, `hero.html`, `navigation.html`, `page-end.html` and `footer.html`. Links inside the site are relative (`./` on the home page, `../` on sub-pages), so the site can be hosted at a sub-path such as `https://www.example.edu/~yourname/` without a `baseurl`.
 
-## Styling
+### Styling
 
 Colours, fonts and spacing are defined in `_sass/minimal-light.scss` (general), `assets/css/nav.css` (top bar) and `assets/css/pub.css` (publication list). The design tokens at the bottom of `minimal-light.scss` (`--navy`, `--orange`, ...) are the quickest place to change the colour scheme.
 
-## Deploying
+### Deploying
 
 The site is plain static HTML. It works on GitHub Pages (push the repository and enable Pages), or copy `_site/` to any web server after `bundle exec jekyll build`. `robots.txt` and `sitemap.xml` are generated from `canonical` in `_config.yml`.
+
+## Using the HTML version
+
+The compiled HTML files are available in the [`html_source_file`](https://github.com/yaoyao-liu/homepage/tree/main/html_source_file) folder. If you don't like Jekyll, you may directly edit and use the HTML version.
 
 ## Acknowledgements
 
