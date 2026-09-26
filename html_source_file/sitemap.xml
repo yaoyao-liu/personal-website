@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+ <loc>https://www.example.edu/~yourname/</loc>
+ <lastmod>2026-09-25</lastmod>
+ <changefreq>weekly</changefreq>
+ <priority>1.0</priority>
+</url>
+
+<url>
+ <loc>https://www.example.edu/~yourname/awards/</loc>
+ <lastmod>2026-09-25</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+</url>
+
+<url>
+ <loc>https://www.example.edu/~yourname/biography/</loc>
+ <lastmod>2026-09-25</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+</url>
+
+<url>
+ <loc>https://www.example.edu/~yourname/research-group/</loc>
+ <lastmod>2026-09-25</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+</url>
+
+<url>
+ <loc>https://www.example.edu/~yourname/publications/</loc>
+ <lastmod>2026-09-25</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+</url>
+
+<url>
+ <loc>https://www.example.edu/~yourname/service/</loc>
+ <lastmod>2026-09-25</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+</url>
+
+<url>
+ <loc>https://www.example.edu/~yourname/talks/</loc>
+ <lastmod>2026-09-25</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+</url>
+
+<url>
+ <loc>https://www.example.edu/~yourname/teaching/</loc>
+ <lastmod>2026-09-25</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+</url>
+
+</urlset>
